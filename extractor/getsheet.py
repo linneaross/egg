@@ -81,6 +81,10 @@ if __name__ == '__main__':
         rule_interactions.append(ri)
     rule_set = RuleSet(rule_interactions)
     print ("Total number of records: %d" % len(rule_interactions))
-    rule_set.generateLanguageIndex("lang.html")
-    #for ri in rule_interactions:
-        #print (ri.toString())
+    theList = rule_set.toList()
+    #result = json.loads(theList)
+    result = "data = " + json.dumps(theList, indent=2, sort_keys = True) + ";"
+    f = open("json_rules.js", "w+")
+    f.write(result)
+    f.close()
+    

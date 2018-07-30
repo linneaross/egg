@@ -21,6 +21,12 @@ class RuleSet(object):
                 intCatalog[I] = 0
             intCatalog[I] += 1
 
+    def toList(self):
+        result = []
+        for i in self.ruleInteractions:
+            result.append(i.toMap())
+        return result
+
 class RuleInteraction(object):
     def __init__(self):
         self.language = None
@@ -45,8 +51,21 @@ class RuleInteraction(object):
         self.altAnalyses = row[32]
     def toString(self):
         result = 'Language: ' + self.language + '\nName: ' + self.name + '\nInteraction Type: ' + self.opacityType + '\nReferences: ' + self.references + "\nProcess 1: \n" + self.processes[0].toString() + '\nProcess 2: \n' + self.processes[1].toString() + '\nFree Variation? ' + self.freeVariation + '\nComments: ' + self.comments + '\nAlternate Analyses: ' + self.altAnalyses
-        return result;
-
+        return result
+    def toMap(self):
+        result = {}
+        result["language"] = self.language
+        result["name"] = self.name
+        result["opacityType"] = self.opacityType
+        result["references"] = self.references
+        result["processes"] = []
+        for p in self.processes:
+            result["processes"].append(p.toMap())
+        result["freeVariation"] = self.freeVariation
+        result["comments"] = self.comments
+        result["altAnalyses"] = self.altAnalyses
+        return result
+    
 class Process(object):
     def __init__(self, desc, ruleType, lim, prod, add):
         self.description = desc
@@ -56,5 +75,14 @@ class Process(object):
         self.additionalInt = add
     def toString(self):
         result = 'Rule Description: ' + self.description + '\nRule Type: ' + self.ruleType + '\nLimitations: ' + self.limitations + '\nProductivity: ' + self.productivity + '\nAdditional Interactions: ' + self.additionalInt
+        return result
+    def toMap(self):
+        result = {}
+        result["description"] = self.description
+        result["ruleType"] = self.ruleType
+        result["limitations"] = self.limitations
+        result["productivity"] = self.productivity
+        result["additionalInt"] = self.additionalInt
         return result;
+        
         

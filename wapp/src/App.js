@@ -7,11 +7,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Opaque Interaction Database</h1>
+          <h2 className="App-subtitle">The University of Massachusetts, Amherst</h2>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Brought to you by a grant study faciliated by the Linguistics Department at the University of Massachusetts, Amherst.
         </p>
       </div>
     );
