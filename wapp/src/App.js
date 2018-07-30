@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Detail from './Detail';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <p className="App-intro">
           Brought to you by a grant study faciliated by the Linguistics Department at the University of Massachusetts, Amherst.
         </p>
+        <Detail />
       </div>
     );
   }

@@ -1,0 +1,35 @@
+.Detail {
+  text-align: center;
+}
+
+.Detail-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.Detail-header {
+  background-color: maroon;
+  height: 80px;
+  padding: 20px;
+  color: whitesmoke;
+}
+
+.Detail-title {
+  font-size: 1.5em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Detail-subtitle{
+  font-size: 1.0em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Detail-intro {
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
