@@ -1,5 +1,6 @@
 .Detail {
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .Detail-logo {
@@ -29,7 +30,3 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
